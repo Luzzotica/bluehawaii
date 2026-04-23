@@ -1,4 +1,4 @@
-import Image from "next/image";
+import BeforeAfterSlider from "./BeforeAfterSlider";
 
 export default function About() {
   return (
@@ -30,17 +30,13 @@ export default function About() {
           </p>
         </div>
 
-        {/* Company photo */}
-        <div className="relative">
-          <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-            <Image
-              src="/images/about.png"
-              alt="Deep Blue Hawaii team building a plantation style home on Maui"
-              fill
-              className="object-cover"
-            />
-          </div>
-        </div>
+        {/* Before / After slider */}
+        <BeforeAfterSlider
+          beforeSrc="/images/about-construction.jpg"
+          afterSrc="/images/about-finished.jpg"
+          beforeAlt="Plantation style home under construction with steel framing on Maui"
+          afterAlt="Completed plantation style home on Maui"
+        />
       </div>
     </section>
   );
