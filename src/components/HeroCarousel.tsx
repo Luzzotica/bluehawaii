@@ -1,20 +1,21 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 
 const slides = [
   {
-    gradient: "from-sky-400 via-cyan-500 to-blue-600",
+    image: "/images/hero-1.png",
     title: "Build Your Paradise",
-    subtitle: "Custom luxury homes on Maui",
+    subtitle: "Quality plantation style homes on Maui",
   },
   {
-    gradient: "from-teal-400 via-emerald-500 to-cyan-600",
+    image: "/images/hero-2.png",
     title: "Island Living, Perfected",
     subtitle: "Designed for the Hawaiian lifestyle",
   },
   {
-    gradient: "from-blue-500 via-sky-400 to-amber-300",
+    image: "/images/hero-3.png",
     title: "From Ocean to Summit",
     subtitle: "Building dream homes across Maui",
   },
@@ -58,24 +59,34 @@ export default function HeroCarousel() {
         {slides.map((slide, i) => (
           <div
             key={i}
-            className={`min-w-full h-full bg-gradient-to-br ${slide.gradient} flex items-center justify-center`}
+            className="relative min-w-full h-full"
             role="group"
             aria-roledescription="slide"
             aria-label={`Slide ${i + 1} of ${slides.length}`}
           >
-            <div className="text-center text-white px-6">
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
-                {slide.title}
-              </h1>
-              <p className="text-xl md:text-2xl font-light drop-shadow-md">
-                {slide.subtitle}
-              </p>
-              <a
-                href="mailto:info@bluehawaiihomes.com"
-                className="inline-block mt-8 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-8 rounded-full border border-white/40 transition-colors"
-              >
-                Get In Touch
-              </a>
+            <Image
+              src={slide.image}
+              alt={slide.title}
+              fill
+              className="object-cover"
+              priority={i === 0}
+            />
+            <div className="absolute inset-0 bg-black/35" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="text-center text-white px-6">
+                <h1 className="text-5xl md:text-7xl font-bold mb-4 drop-shadow-lg">
+                  {slide.title}
+                </h1>
+                <p className="text-xl md:text-2xl font-light drop-shadow-md">
+                  {slide.subtitle}
+                </p>
+                <a
+                  href="mailto:info@bluehawaiihomes.com"
+                  className="inline-block mt-8 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-8 rounded-full border border-white/40 transition-colors"
+                >
+                  Get In Touch
+                </a>
+              </div>
             </div>
           </div>
         ))}

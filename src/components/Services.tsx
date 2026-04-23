@@ -2,7 +2,7 @@ const services = [
   {
     title: "Custom Home Building",
     description:
-      "Ground-up luxury homes tailored to island living. From design to completion, we bring your dream home to life on Maui.",
+      "Quality plantation style homes built for island living. From design to completion, we deliver your dream home on Maui at an affordable price.",
     icon: (
       <path
         strokeLinecap="round"

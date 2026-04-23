@@ -5,10 +5,10 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Company info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Blue Hawaii Homes</h3>
+            <h3 className="text-xl font-bold mb-4">Deep Blue Hawaii</h3>
             <p className="text-sky-200 text-sm leading-relaxed">
-              Building exceptional homes on Maui, Hawaii. Crafted with care,
-              designed for island living.
+              Quality plantation style homes on Maui, Hawaii. Crafted with care,
+              priced for real life.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
       <div className="border-t border-sky-800">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <p className="text-sky-300 text-xs text-center">
-            &copy; {new Date().getFullYear()} Blue Hawaii Homes. All rights
+            &copy; {new Date().getFullYear()} Deep Blue Hawaii. All rights
             reserved.
           </p>
         </div>

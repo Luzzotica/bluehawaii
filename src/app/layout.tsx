@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Blue Hawaii Homes | Custom Home Builder in Maui",
+  title: "Deep Blue Hawaii | Custom Home Builder in Maui",
   description:
-    "Blue Hawaii Homes is a Maui-based home building company specializing in custom luxury homes, renovations, and sustainable design for island living.",
+    "Deep Blue Hawaii is a Maui-based home building company specializing in quality plantation style homes, renovations, and sustainable design at an affordable price.",
 };
 
 export default function RootLayout({
