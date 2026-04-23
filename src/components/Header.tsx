@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,8 +9,17 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-sky-900/85 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="text-white text-xl font-bold tracking-wide">
-          DEEP BLUE HAWAII
+        <a href="#" className="flex items-center gap-3">
+          <Image
+            src="/logo.png"
+            alt="Deep Blue Hawaii logo"
+            width={40}
+            height={40}
+            className="rounded"
+          />
+          <span className="text-white text-xl font-bold tracking-wide">
+            DEEP BLUE HAWAII
+          </span>
         </a>
 
         {/* Desktop nav */}

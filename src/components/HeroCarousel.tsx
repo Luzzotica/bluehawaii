@@ -81,7 +81,7 @@ export default function HeroCarousel() {
                   {slide.subtitle}
                 </p>
                 <a
-                  href="mailto:info@bluehawaiihomes.com"
+                  href="mailto:info@deepblue-hawaii.com"
                   className="inline-block mt-8 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold py-3 px-8 rounded-full border border-white/40 transition-colors"
                 >
                   Get In Touch

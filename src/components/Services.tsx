@@ -2,7 +2,7 @@ const services = [
   {
     title: "Custom Home Building",
     description:
-      "Quality plantation style homes built for island living. From design to completion, we deliver your dream home on Maui at an affordable price.",
+      "Quality plantation style homes or custom homes, built for island living. From design to completion, we deliver your dream home package for an affordable price.",
     icon: (
       <path
         strokeLinecap="round"
@@ -14,23 +14,9 @@ const services = [
     accent: "from-sky-400 to-blue-500",
   },
   {
-    title: "Home Renovations",
-    description:
-      "Modernize and refresh your existing home. We specialize in renovations that respect the original character while adding modern comfort.",
-    icon: (
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth={1.5}
-        d="M11.42 15.17l-5.1-5.1a1.5 1.5 0 010-2.12l.88-.88a1.5 1.5 0 012.12 0l.88.88a1.5 1.5 0 002.12 0l.88-.88a1.5 1.5 0 012.12 0l.88.88a1.5 1.5 0 010 2.12l-5.1 5.1a1.5 1.5 0 01-2.12 0z"
-      />
-    ),
-    accent: "from-cyan-400 to-teal-500",
-  },
-  {
     title: "Outdoor Living Spaces",
     description:
-      "Lanais, pools, and tropical landscaping integration. Extend your living space to embrace Maui's year-round outdoor lifestyle.",
+      "Extend your living space with lots of windows, sliding glass doors, full Lanais, and tropical landscaping integration. Extend your living space to embrace Hawaii's year-round outdoor lifestyle.",
     icon: (
       <path
         strokeLinecap="round"
@@ -66,12 +52,13 @@ export default function Services() {
             Our Services
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            From custom builds to sustainable design, we offer comprehensive
-            home building services tailored to Maui&apos;s unique environment.
+            From comfortable and cost effective modern plantation style homes
+            to full custom builds, Deep Blue Hawaii delivers complete home
+            packages, tailored to Hawaii&apos;s unique, beautiful environment.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {services.map((service, i) => (
             <div
               key={i}

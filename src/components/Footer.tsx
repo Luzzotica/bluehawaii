@@ -7,8 +7,8 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Deep Blue Hawaii</h3>
             <p className="text-sky-200 text-sm leading-relaxed">
-              Quality plantation style homes on Maui, Hawaii. Crafted with care,
-              priced for real life.
+              Quality, full home packages — designed, delivered and crafted with
+              care in 1/2 the time.
             </p>
           </div>
 
@@ -40,13 +40,8 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h4 className="font-semibold mb-4">Get In Touch</h4>
-            <div className="text-sky-200 text-sm space-y-2 mb-6">
-              <p>123 Aloha Street</p>
-              <p>Kahului, Maui, HI 96732</p>
-              <p>(808) 555-0123</p>
-            </div>
             <a
-              href="mailto:info@bluehawaiihomes.com"
+              href="mailto:info@deepblue-hawaii.com"
               className="inline-block bg-sky-500 hover:bg-sky-400 text-white font-semibold py-2.5 px-6 rounded-full transition-colors text-sm"
             >
               Email Us
