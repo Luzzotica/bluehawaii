@@ -10,7 +10,7 @@ export default function About() {
             Building Dreams in Paradise
           </h2>
           <p className="text-gray-600 leading-relaxed mb-4">
-            Deep Blue Hawaii is a Maui-based home building company dedicated to
+            DeepBlue Hawaii is a Maui-based home building company dedicated to
             creating quality, affordable residences that embrace the beauty and
             spirit of island living. With deep roots in the local community, we bring
             decades of experience building homes that withstand Hawaii&apos;s

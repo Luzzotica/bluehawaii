@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {/* Company info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Deep Blue Hawaii</h3>
+            <h3 className="text-xl font-bold mb-4">DeepBlue Hawaii</h3>
             <p className="text-sky-200 text-sm leading-relaxed">
               Quality, full home packages — designed, delivered and crafted with
               care in 1/2 the time.
@@ -54,7 +54,7 @@ export default function Footer() {
       <div className="border-t border-sky-800">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <p className="text-sky-300 text-xs text-center">
-            &copy; {new Date().getFullYear()} Deep Blue Hawaii. All rights
+            &copy; {new Date().getFullYear()} DeepBlue Hawaii. All rights
             reserved.
           </p>
         </div>

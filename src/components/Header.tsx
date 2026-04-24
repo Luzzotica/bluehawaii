@@ -12,13 +12,13 @@ export default function Header() {
         <a href="#" className="flex items-center gap-3">
           <Image
             src="/logo.png"
-            alt="Deep Blue Hawaii logo"
+            alt="DeepBlue Hawaii logo"
             width={40}
             height={40}
             className="rounded"
           />
           <span className="text-white text-xl font-bold tracking-wide">
-            DEEP BLUE HAWAII
+            DEEPBLUE HAWAII
           </span>
         </a>
 

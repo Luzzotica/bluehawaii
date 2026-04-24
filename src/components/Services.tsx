@@ -53,7 +53,7 @@ export default function Services() {
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
             From comfortable and cost effective modern plantation style homes
-            to full custom builds, Deep Blue Hawaii delivers complete home
+            to full custom builds, DeepBlue Hawaii delivers complete home
             packages, tailored to Hawaii&apos;s unique, beautiful environment.
           </p>
         </div>
