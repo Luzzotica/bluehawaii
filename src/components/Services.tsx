@@ -1,4 +1,16 @@
-const services = [
+import Link from "next/link";
+import type { ReactElement } from "react";
+
+type Service = {
+  title: string;
+  description: string;
+  icon: ReactElement;
+  accent: string;
+  href?: string;
+  cta?: string;
+};
+
+const services: Service[] = [
   {
     title: "Custom Home Building",
     description:
@@ -41,6 +53,22 @@ const services = [
     ),
     accent: "from-teal-400 to-emerald-500",
   },
+  {
+    title: "2026 Finishes Selection Guide",
+    description:
+      "Explore our curated palette of finishes, fixtures, and materials for the 2026 building season. Download the free guide to start envisioning your dream home.",
+    icon: (
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+      />
+    ),
+    accent: "from-amber-400 to-orange-500",
+    href: "/finishes-guide",
+    cta: "Get the free guide →",
+  },
 ];
 
 export default function Services() {
@@ -58,32 +86,50 @@ export default function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {services.map((service, i) => (
-            <div
-              key={i}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 group"
-            >
-              <div
-                className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.accent} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
-              >
-                <svg
-                  className="w-7 h-7 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+          {services.map((service, i) => {
+            const cardInner = (
+              <>
+                <div
+                  className={`w-14 h-14 rounded-xl bg-gradient-to-br ${service.accent} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}
                 >
-                  {service.icon}
-                </svg>
+                  <svg
+                    className="w-7 h-7 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    {service.icon}
+                  </svg>
+                </div>
+                <h3 className="text-lg font-semibold text-sky-900 mb-2">
+                  {service.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {service.description}
+                </p>
+                {service.cta && (
+                  <p className="mt-4 text-sm font-semibold text-orange-600 group-hover:text-orange-700">
+                    {service.cta}
+                  </p>
+                )}
+              </>
+            );
+
+            const className =
+              "bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 group" +
+              (service.href ? " cursor-pointer block" : "");
+
+            return service.href ? (
+              <Link key={i} href={service.href} className={className}>
+                {cardInner}
+              </Link>
+            ) : (
+              <div key={i} className={className}>
+                {cardInner}
               </div>
-              <h3 className="text-lg font-semibold text-sky-900 mb-2">
-                {service.title}
-              </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {service.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
