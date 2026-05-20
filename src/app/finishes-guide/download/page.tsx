@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 
 const PDF_PATH = "/downloads/deepblue-hawaii-2026-finishes-guide.pdf";
 
@@ -31,12 +30,12 @@ export default function FinishesGuideDownloadPage() {
               >
                 Download the guide (PDF)
               </a>
-              <Link
-                href="/#contact"
+              <a
+                href="mailto:info@deepblue-hawaii.com"
                 className="inline-flex items-center justify-center border border-sky-900 text-sky-900 font-semibold py-3 px-8 rounded-lg hover:bg-sky-900 hover:text-white transition-colors"
               >
                 Talk to our team
-              </Link>
+              </a>
             </div>
 
             <p className="mt-8 text-sm text-gray-500">
