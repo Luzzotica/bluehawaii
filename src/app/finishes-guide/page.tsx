@@ -101,8 +101,7 @@ export default function FinishesGuidePage() {
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Every selection in the guide is informed by the homes we build
-              from the ground up. Drag to see one of our plantation style
-              builds come together.
+              from the ground up.
             </p>
           </div>
           <BeforeAfterSlider
