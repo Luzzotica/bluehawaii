@@ -1,55 +1,62 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const PDF_PATH = "/downloads/deepblue-hawaii-2026-finishes-guide.pdf";
 
 export default function FinishesGuideDownloadPage() {
   return (
-    <main className="min-h-screen bg-sky-50 py-20">
-      <div className="max-w-2xl mx-auto px-6">
-        <div className="bg-white rounded-2xl shadow-lg p-10 text-center">
-          <div className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center mb-6">
-            <svg
-              className="w-8 h-8 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4.5 12.75l6 6 9-13.5"
-              />
-            </svg>
+    <main className="min-h-screen bg-white">
+      <section className="pt-28 pb-20">
+        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="text-sm font-semibold tracking-wide uppercase text-orange-600 mb-3">
+              Mahalo &mdash; your guide is ready
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-sky-900 mb-6 leading-tight">
+              Start designing the home you&apos;ve been dreaming of.
+            </h1>
+            <p className="text-gray-600 leading-relaxed mb-8 max-w-xl">
+              Inside the 2026 Finishes Selection Guide you&apos;ll find the
+              materials, fixtures, and palettes we&apos;re bringing to this
+              year&apos;s builds. Use it to sketch out the look and feel of
+              your future home on Maui &mdash; then let&apos;s build it
+              together.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href={PDF_PATH}
+                download
+                className="inline-flex items-center justify-center bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-amber-600 hover:to-orange-600 transition-colors"
+              >
+                Download the guide (PDF)
+              </a>
+              <Link
+                href="/#contact"
+                className="inline-flex items-center justify-center border border-sky-900 text-sky-900 font-semibold py-3 px-8 rounded-lg hover:bg-sky-900 hover:text-white transition-colors"
+              >
+                Talk to our team
+              </Link>
+            </div>
+
+            <p className="mt-8 text-sm text-gray-500">
+              Ready to take the next step? Bring the finishes you love to a
+              conversation with our team and we&apos;ll help shape them into
+              your home.
+            </p>
           </div>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-sky-900 mb-4">
-            Mahalo!
-          </h1>
-          <p className="text-gray-600 mb-8 leading-relaxed">
-            Your 2026 Finishes Selection Guide is ready. Click below to
-            download your copy &mdash; we&apos;ve also kept your email on file
-            so we can share future updates from DeepBlue Hawaii.
-          </p>
-
-          <a
-            href={PDF_PATH}
-            download
-            className="inline-block bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold py-3 px-8 rounded-lg hover:from-amber-600 hover:to-orange-600 transition-colors"
-          >
-            Download the guide (PDF)
-          </a>
-
-          <div className="mt-10">
-            <Link
-              href="/"
-              className="text-sm text-sky-700 hover:text-sky-900 underline"
-            >
-              ← Back to DeepBlue Hawaii
-            </Link>
+          <div className="relative aspect-[4/5] md:aspect-[3/4] rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src="/images/about-finished.jpg"
+              alt="Completed plantation style home on Maui"
+              fill
+              className="object-cover"
+              priority
+            />
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
