@@ -17,19 +17,19 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Quick Links</h4>
             <nav className="flex flex-col gap-2">
               <a
-                href="#about"
+                href="/#about"
                 className="text-sky-200 hover:text-white transition-colors text-sm"
               >
                 About Us
               </a>
               <a
-                href="#services"
+                href="/#services"
                 className="text-sky-200 hover:text-white transition-colors text-sm"
               >
                 Services
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 className="text-sky-200 hover:text-white transition-colors text-sm"
               >
                 Contact
